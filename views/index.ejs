@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Free Throw Percentage Tracker</title>
+</head>
+
+<body>
+    <h1 style="font-size: 50px;">Free Throw Percentage Tracker</h1>
+    <button id="openInfo">About me</button><br>
+        <div id="info" class="description">
+            <h2>Hello everyone! My name is <%= name %></h1>
+            <p>Basketball has always been my stress reliver.</p>
+            <p>Growing up, I was always in the driveway shooting hoops all day long.</p>
+            <p>One day I decided I wanted to track my free throw percentage.</p>
+            <p>So I took out my little notebook and started recording my data.</p>
+            <p>This inspired me to create this app for other basketball lovers out there like me.</p>
+            <p>I hope you enjoy tracking your Free Throw Percentage!</p>
+            <button id="closeInfo">Close</button><br>
+        </div>
+    <br>
+    <div class="topLink">
+        <a href="/dashboard" class="topLink">See Shooting Statistics</a> 
+    </div>
+    <br>
+    <div class="bottomLink">
+        <a href="/addData" class="bottomLink">Add Free Throw Data</a>
+    </div>
+    
+</body>
+</html>
+
+<style>
+    body{
+        text-align: center;
+    }
+
+    .topLink {
+        top: 20%;
+    }
+
+    .bottomLink{
+        top: 50%;
+    }
+
+    a {
+        background-color: whitesmoke;
+        border: 2px solid black;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10px;
+    }
+
+    a:hover {
+        background-color: orange;
+        color: white;
+    }
+
+    .description {
+        margin: auto;
+        padding: 10px 20px;
+        width: 50%;
+        border-radius: 15px;
+        display: none;
+    }
+
+    section{
+        justify-content: center;
+    }
+
+</style>
+
+<script> 
+    // jquery code to toggle more information about me
+    moreInfoDiv = document.getElementById("info");
+    aboutMeButton = document.getElementById("openInfo");
+
+    // opens the more information about me
+    $(document).ready(function() {
+        $("#openInfo").click(function() {
+            moreInfoDiv.style.display = "inline";
+            aboutMeButton.style.display = "none";
+        })
+    })
+
+    // closes the more information about me
+    $(document).ready(function() {
+        $("#closeInfo").click(function() {
+            moreInfoDiv.style.display = "none";
+            aboutMeButton.style.display = "inline";
+        })
+    })
+
+
+
+</script>
